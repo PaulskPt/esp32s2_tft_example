@@ -10,6 +10,7 @@
 # 4) At intervals synchronize the built-in realtime clock (RTC) with datetime
 #    from Adafruit IO Time Service
 # 5) Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
+# 6) Author details (from secrets.py)
 # This script contains a 'fail-safe' sensor connection:
 # If the temperature sensor is disconnected this script will continue to
 # try to reconnect to the sensor. If the sensor is connected again,
