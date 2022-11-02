@@ -59,7 +59,7 @@ The script uses the following modules that are not in the CircuitPython core:
 * adafruit_register
 * neopixel
 
-* The needed modules one can get by downloading the .zip file of ones choice at 
+The needed modules one can get by downloading the .zip file of ones choice at 
   '<https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20221101>'
 
 
