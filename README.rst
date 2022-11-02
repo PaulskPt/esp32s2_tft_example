@@ -5,10 +5,12 @@ This repo contains one example of how to program the Adafruit ESP32-S2-TFT-Feath
 
 The example uses the Adafruit_DisplayIO library. 
 The script creates four Groups: 
+```
 - ba_grp for the battery;
 - dt_grp for the date and time;
-- ta_grp for the pr_id() and pr_author() functionss;
-- te_grp for the temperature.
+- ta_grp for the pr_id() and pr_author() functions;
+- te_grp for the temperature.```
+
 The script uses global label objects: ba, dt, ta and te. 
 These lable objects will be used to actualize the label.text attribute from within the functions:
 pr_id(), pr_author(), pr_bat(), get_dt_fm_rtc() and get_time()
