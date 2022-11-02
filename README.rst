@@ -69,17 +69,17 @@ You need also to personalize the values in the file secrets.py:
 - WiFi Password;
 - AIO Username;
 - AIO Key;
-- time zone (string, e.g.: 'America/New_York'
+- time zone (string, e.g.: 'America/New_York';
 - tz_offset in seconds. e.g.: New York is UTC - 4 hours = 4 x 3600 = 14400 seconds.
-  For New York the tz_offset value has to be a negative value: -14400
-- DEBUG_FLAG: '0' if you don't want debug output to the REPL. '1' if you want debug output to REPL
-- LOCAL_TIME_FLAG: '1' if you want the time to be your local time (zone). '0' if you want the UTC time displayed
+  For New York the tz_offset value has to be a negative value: -14400;
+- DEBUG_FLAG: '0' if you don't want debug output to the REPL. '1' if you want debug output to REPL;
+- LOCAL_TIME_FLAG: '1' if you want the time to be your local time (zone). '0' if you want the UTC time displayed;
 - AUTHOR1 ... AUTHOR3. For personal details e.g.:
-  AUTHOR1 '(c) 2022 John'
-  AUTHOR2 'Doe'
-  AUTHOR3 'Github: @JDoe'
+  AUTHOR1 '(c) 2022 John';
+  AUTHOR2 'Doe';
+  AUTHOR3 'Github: @JDoe'.
 
-Don't change the names of the 'Keys' in secrets.py, e.g. 'ADAFRUIT_IO_KEY'
+Don't change the names of the 'Keys' in secrets.py, e.g. 'ADAFRUIT_IO_KEY'.
 
 Automatic WiFi connection:
 --------------------------
