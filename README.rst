@@ -23,8 +23,9 @@ Displays on TFT display:
 - Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 - Personal details of the author
 
-At intervals (currently 10 minutes) the script gets the datetime from the Adafruit IO Time Service. 
-It then updates the built-in Realtime Clock (RTC).
+The built-in Realtime Clock (RTC) is set at start of the script with date and time received through a response of a request to the Adafruit IO Time Service (AIO TS).
+Then, at intervals, currently 10 minutes, the script again receives date and time through a response of a request to the AIO TS. 
+The script then updates the RTC.
 
 The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
 
