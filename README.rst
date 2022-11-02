@@ -49,7 +49,7 @@ This example depends on:
 
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
 
-The script the following modules that are not in the CircuitPython core:
+The script uses the following modules that are not in the CircuitPython core:
 
 * dafruit_display_text
 * adafruit_lc709203f
