@@ -21,7 +21,7 @@ Displays on TFT display:
 - Battery Voltage and charge percentage
 - Temperature of connected sensor
 - Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
-- Personal details of the author
+- Details of the author
 
 The built-in Realtime Clock (RTC) is set at start of the script with date and time received through a response of a request to the Adafruit IO Time Service (AIO TS).
 Then, at intervals, currently 10 minutes, the script again receives date and time through a response of a request to the AIO TS. 
