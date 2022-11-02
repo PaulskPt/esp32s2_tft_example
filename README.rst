@@ -96,6 +96,4 @@ In this folder I added a REPL_output.txt file.
 In the folder 'images' I put a screenshot of the VSCode Outline of this example script.
 Added also a short video of the ESP32-S2-TFT-Feather and the TMP117 while this example script was running.
 
-For information on building library documentation, please check out
-`this guide <https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library/sharing-our-docs-on-readthedocs#sphinx-5-1>`_.
 
