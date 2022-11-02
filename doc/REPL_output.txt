@@ -1,0 +1,135 @@
+Wednesday 2022-11-02 14h25Z
+Board: Adafruit ESP32-S2-TFT-Feather
+IDE: mu-editor V1.1.1
+
+Script to display:
+a) board ID;
+b) Battery Voltage and percentage charge
+c) Date time (sync'd from AIO Time Service 
+d) Temperature (in degrees C) from temperature sensor Adafruit_TMP117
+   (at interval condition when: elapsed_t % interval_t <= 10)
+e) Author details (3) read from file secrets.py and displayed (function pr_author())
+
+Latest changes:
+I optimized the function 'create_groups()'.
+I renamed the names of certain group related global variables into:
+ba_grp, dt_grp, ta_grp and te_grp
+ba, dt, ta and te
+I renamed the function 'pr_hello_w()' into 'pr_id()'
+In main() I added a boolean variable: sync_dt.
+
+
+REPL output:
+
+
+
+Auto-reload is on. Simply save files over USB to run them or enter REPL to disable.
+code.py output:
+]0;🐍192.168.1.xxx| code.py | 8.0.0-beta.4\
+This script is running on an 'adafruit_feather_esp32s2_tft'
+global:                Start scan for connected I2C devices...
+                       2 I2C devices found:
+                       Device 0 at address 0x0b
+                       Device 1 at address 0x48
+                       End of i2c scan
+setup():               WiFi already connected to: '<my_WiFi_AP_SSID>'
+main():                elapsed_t=  0
+main():                elapsed_t % interval_t =  0
+main():                sync_dt= True
+                       -----------------------------------------------
+get_time_fm_AIO():     Time=  2022-11-02 14:26:37.944 306 3 +0000 WET
+                       -----------------------------------------------
+get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
+pr_bat():              LC709203F test
+pr_bat():              Make sure LiPoly battery is plugged into the board!
+pr_bat():              Battery IC version: 0x2aff
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+connect_temp_sensor(): temperature sensor found
+connect_temp_sensor(): temperature sensor connected
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:26
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  25
+main():                elapsed_t % interval_t =  25
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:27
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  51
+main():                elapsed_t % interval_t =  51
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.69 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:27
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  78
+main():                elapsed_t % interval_t =  18
+main():                sync_dt= True
+                       -----------------------------------------------
+get_time_fm_AIO():     Time=  2022-11-02 14:27:56.047 306 3 +0000 WET
+                       -----------------------------------------------
+get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:28
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  29
+main():                elapsed_t % interval_t =  29
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.69 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:28
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  55
+main():                elapsed_t % interval_t =  55
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.69 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  82
+main():                elapsed_t % interval_t =  22
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.69 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  108
+main():                elapsed_t % interval_t =  48
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.67 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  135
+main():                elapsed_t % interval_t =  15
+main():                sync_dt= True
+                       -----------------------------------------------
+get_time_fm_AIO():     Time=  2022-11-02 14:30:11.031 306 3 +0000 WET
+                       -----------------------------------------------
+get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:30
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  28
+main():                elapsed_t % interval_t =  28
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:30
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  55
+main():                elapsed_t % interval_t =  55
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:31
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+main():                elapsed_t=  81
+main():                elapsed_t % interval_t =  21
+main():                sync_dt= False
+pr_bat():              Battery: 4.2 Volts, 98.4% charged
+get_temp():            Temp: 26.70 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 14:31
+pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
