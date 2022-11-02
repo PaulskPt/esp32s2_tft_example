@@ -320,8 +320,8 @@ def pr_id():
     le = len(t_lst)
     for _ in range(le):
         ta[_].scale = 3
-        ta[_].text = t_lst[_]
         t = t_lst[_]
+        ta[_].text = t
         if not my_debug:
             if _ < le-1:
                 print(t+' ', end='')
