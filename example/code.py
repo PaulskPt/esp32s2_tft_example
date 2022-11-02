@@ -7,15 +7,19 @@
 # 1) ID of the microcontroller this script is running on
 # 2) Battery Voltage and charge percentage
 # 3) Temperature of connected sensor
-# 4) At intervals synchronize the built-in realtime clock (RTC) with datetime
-#    from Adafruit IO Time Service
-#    Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
+# 4) Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 # 5) Author details (from secrets.py)
 # Blinks the built-in red LED and blinks the build-in NEOPIXEL
 # This script contains a 'fail-safe' sensor connection:
 # If the temperature sensor is disconnected this script will continue to
 # try to reconnect to the sensor. If the sensor is connected again,
 # this script will continue to read the temperature data from the sensor.
+#
+# The built-in Realtime Clock (RTC) is set at start of the script with date and time 
+# received through a response of a request to the Adafruit IO Time Service (AIO TS).
+# Then, at intervals, currently 10 minutes, the script again receives date and time 
+# through a response of a request to the AIO TS. 
+# The script then updates the RTC.
 ##############################
 import board
 import busio
