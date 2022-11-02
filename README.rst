@@ -5,25 +5,26 @@ This repo contains one example of how to program the Adafruit ESP32-S2-TFT-Feath
 
 The example uses the Adafruit_DisplayIO library. 
 The script creates four Groups: 
-```
+
 - ba_grp for the battery;
 - dt_grp for the date and time;
 - ta_grp for the pr_id() and pr_author() functions;
-- te_grp for the temperature.```
+- te_grp for the temperature.
 
 The script uses global label objects: ba, dt, ta and te. 
 These lable objects will be used to actualize the label.text attribute from within the functions:
 pr_id(), pr_author(), pr_bat(), get_dt_fm_rtc() and get_time()
 
 Displays on TFT display:
- 1) ID of the microcontroller this script is running on
- 2) Battery Voltage and charge percentage
- 3) Temperature of connected sensor
- 4) At intervals synchronize the built-in realtime clock (RTC) with datetime
-    from Adafruit IO Time Service
- 5) Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
- 6) Personal details of the author
- 7) Blinks the normal internal LED as well as the built-in NEOPIXEL.
+
+- ID of the microcontroller this script is running on
+- Battery Voltage and charge percentage
+- Temperature of connected sensor
+- At intervals synchronize the built-in realtime clock (RTC) with datetime
+  from Adafruit IO Time Service
+- Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
+- Personal details of the author
+- Blinks the normal internal LED as well as the built-in NEOPIXEL.
 
 This script contains a 'fail-safe' sensor connection:
 If the temperature sensor is disconnected this script will continue to
@@ -31,7 +32,7 @@ try to reconnect to the sensor. If the sensor is connected again,
 this script will continue to read the temperature data from the sensor.
 
 Note: In function pr_id() I did some string slicing which is related to the current device name 
-retrieve by board.board_id because I didn't want to have an underscore displayed and I needed/wanted 
+retrieved by board.board_id because I didn't want to have an underscore displayed and I needed/wanted 
 the board_id to split over three lines of text on the display.
 
 Hardware requirements
@@ -50,25 +51,27 @@ This example depends on:
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
 
 The script the following modules that are not in the CircuitPython core:
+```
 * dafruit_display_text
 * adafruit_lc709203f
 * adafruit_ntp
 * adafruit_tmp117
 * adafruit_register
-* neopixel
+* neopixel```
 
 * The needed modules one can get by downloading the .zip file of ones choice at 
   '<https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20221101>'
 
 
 You need also to personalize the values in the file secrets.py:
+
 - WiFi SSID;
 - WiFi Password;
 - AIO Username;
 - AIO Key;
 - time zone (string, e.g.: 'America/New_York'
-- tz_offset in seconds. e.g.: New York is UTC - 4 hours = 4 x 3600 = 14400 seconds
-  and for New York the tz_offset value has to be a negative value: -14400
+- tz_offset in seconds. e.g.: New York is UTC - 4 hours = 4 x 3600 = 14400 seconds.
+  For New York the tz_offset value has to be a negative value: -14400
 - DEBUG_FLAG: '0' if you don't want debug output to the REPL. '1' if you want debug output to REPL
 - LOCAL_TIME_FLAG: '1' if you want the time to be your local time (zone). '0' if you want the UTC time displayed
 - AUTHOR1 ... AUTHOR3. For personal details e.g.:
@@ -81,7 +84,7 @@ Don't change the names of the 'Keys' in secrets.py, e.g. 'ADAFRUIT_IO_KEY'
 Automatic WiFi connection:
 --------------------------
 I added the .env file. In this file one needs to fill in ones 'WiFi SSID' and 'WiFi Password'
-(the same as one puts in file Secrets.py). When the file .env is present. CircuitPython
+(the same as one puts in file secrets.py). When the file .env is present. CircuitPython
 will automatically establish WiFi connection to the WiFi Access Point defined in .env (and in secrets.py)
 When a WiFi connection has been established, the circuitpython status_bar will show an IP-address.
   
