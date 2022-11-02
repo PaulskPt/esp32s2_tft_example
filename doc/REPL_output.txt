@@ -1,4 +1,4 @@
-Wednesday 2022-11-02 14h25Z
+Wednesday 2022-11-02 18h48Z
 Board: Adafruit ESP32-S2-TFT-Feather
 IDE: mu-editor V1.1.1
 
@@ -22,114 +22,70 @@ In main() I added a boolean variable: sync_dt.
 REPL output:
 
 
+]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | Done | 8.0.0-beta.4\
+Code stopped by auto-reload. Reloading soon.
 
 Auto-reload is on. Simply save files over USB to run them or enter REPL to disable.
 code.py output:
-]0;🐍192.168.1.xxx| code.py | 8.0.0-beta.4\
+]0;🐱92.168.1.112 | code.py | 8.0.0-beta.4\
 This script is running on an 'adafruit_feather_esp32s2_tft'
 global:                Start scan for connected I2C devices...
                        2 I2C devices found:
                        Device 0 at address 0x0b
                        Device 1 at address 0x48
                        End of i2c scan
-setup():               WiFi already connected to: '<my_WiFi_AP_SSID>'
+setup():               WiFi already connected to: '<SSID of my WiFi AP>'
+-----------------------------------------------------------------------------------------
 main():                elapsed_t=  0
 main():                elapsed_t % interval_t =  0
+pr_id():               ID to display: 'adafruit feather esp32s2 tft'
 main():                sync_dt= True
                        -----------------------------------------------
-get_time_fm_AIO():     Time=  2022-11-02 14:26:37.944 306 3 +0000 WET
+get_time_fm_AIO():     Time=  2022-11-02 18:48:29.913 306 3 +0000 WET
                        -----------------------------------------------
 get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
 pr_bat():              LC709203F test
 pr_bat():              Make sure LiPoly battery is plugged into the board!
 pr_bat():              Battery IC version: 0x2aff
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
+pr_bat():              Battery: 4.2 Volts, 100.0% charged
 connect_temp_sensor(): temperature sensor found
 connect_temp_sensor(): temperature sensor connected
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:26
+get_dt_fm_rtc():       date: 2022-11-02, time: 18:48
 pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+-----------------------------------------------------------------------------------------
 main():                elapsed_t=  25
 main():                elapsed_t % interval_t =  25
+pr_id():               ID to display: 'adafruit feather esp32s2 tft'
 main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:27
+pr_bat():              Battery: 4.2 Volts, 100.0% charged
+get_temp():            Temp: 26.07 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 18:49
 pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+-----------------------------------------------------------------------------------------
 main():                elapsed_t=  51
 main():                elapsed_t % interval_t =  51
+pr_id():               ID to display: 'adafruit feather esp32s2 tft'
 main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.69 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:27
+pr_bat():              Battery: 4.2 Volts, 100.0% charged
+get_temp():            Temp: 26.07 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 18:49
 pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+-----------------------------------------------------------------------------------------
 main():                elapsed_t=  78
 main():                elapsed_t % interval_t =  18
+pr_id():               ID to display: 'adafruit feather esp32s2 tft'
 main():                sync_dt= True
                        -----------------------------------------------
-get_time_fm_AIO():     Time=  2022-11-02 14:27:56.047 306 3 +0000 WET
+get_time_fm_AIO():     Time=  2022-11-02 18:49:47.993 306 3 +0000 WET
                        -----------------------------------------------
 get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:28
+pr_bat():              Battery: 4.2 Volts, 100.0% charged
+get_temp():            Temp: 26.06 C
+get_dt_fm_rtc():       date: 2022-11-02, time: 18:49
 pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+-----------------------------------------------------------------------------------------
 main():                elapsed_t=  29
 main():                elapsed_t % interval_t =  29
+pr_id():               ID to display: 'adafruit feather esp32s2 tft'
 main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.69 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:28
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  55
-main():                elapsed_t % interval_t =  55
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.69 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  82
-main():                elapsed_t % interval_t =  22
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.69 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  108
-main():                elapsed_t % interval_t =  48
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.67 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:29
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  135
-main():                elapsed_t % interval_t =  15
-main():                sync_dt= True
-                       -----------------------------------------------
-get_time_fm_AIO():     Time=  2022-11-02 14:30:11.031 306 3 +0000 WET
-                       -----------------------------------------------
-get_time_fm_AIO():     built-in rtc synchronized with Adafruit Time Service date and time
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:30
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  28
-main():                elapsed_t % interval_t =  28
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:30
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  55
-main():                elapsed_t % interval_t =  55
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:31
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
-main():                elapsed_t=  81
-main():                elapsed_t % interval_t =  21
-main():                sync_dt= False
-pr_bat():              Battery: 4.2 Volts, 98.4% charged
-get_temp():            Temp: 26.70 C
-get_dt_fm_rtc():       date: 2022-11-02, time: 14:31
-pr_author():           (c)2022 Paulus Schulinck Github:  @PaulskPt 
+pr_bat():              Battery: 4.2 Volts, 100.0% charged
