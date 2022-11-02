@@ -82,6 +82,7 @@ if not my_debug:
 
 bat_sensor = LC709203F(i2c)
 
+kbd_intr = False
 ssid = None
 password = None
 pool = None
@@ -402,7 +403,7 @@ def do_connect():
                 print(TAG+"Ping no response")
 
 def get_time_fm_AIO():
-    global time_received, TIME_URL
+    global time_received, TIME_URL, kbd_intr
     TAG = tag_adjust("get_time_fm_AIO(): ")
     dst = ''
     if my_debug:
@@ -475,6 +476,8 @@ def get_time_fm_AIO():
                 free_socket()
         except OSError as exc:
             print(TAG+"OSError occurred: {}, errno: {}".format(exc, exc.args[0]), end='\n')
+        except KeyboardInterrupt:
+            kbd_intr = True
 
 def get_dt_fm_rtc():
     global dt
@@ -514,7 +517,7 @@ def get_dt_fm_rtc():
   If failed to reconnect the function clears temp_sensor_present
 """
 def connect_temp_sensor():
-    global temp_sensor_present, tmp117, t0, t1, t2
+    global temp_sensor_present, tmp117, t0, t1, t2, kbd_intr
     TAG= tag_adjust("connect_temp_sensor(): ")
     t = "temperature sensor found"
     temp_sensor_present = False
@@ -523,6 +526,9 @@ def connect_temp_sensor():
         tmp117 = adafruit_tmp117.TMP117(i2c)
     except ValueError as exc:  # ValueError occurs if the temperature sensor is not connected
         pass
+    except KeyboardInterrupt:
+        kbd_intr = True
+        return
 
     if tmp117 is not None:
         temp_sensor_present = True
@@ -541,7 +547,7 @@ def connect_temp_sensor():
         t2 = None
 
 def get_temp():
-    global temp_sensor_present, old_temp, temp_update_cnt, te, tmp117, t0, t1, t2
+    global temp_sensor_present, old_temp, temp_update_cnt, te, tmp117, t0, t1, t2, kbd_intr
     TAG= tag_adjust("get_temp(): ")
     nr = 'no reading'
     if temp_sensor_present:
@@ -573,7 +579,9 @@ def get_temp():
                 te[0].text = t0
                 te[idx].text = nr
                 board.DISPLAY.show(te_grp)
-
+        except KeyboardInterrupt:
+            kbd_intr = True
+            return False
         except OSError as exc:
             print(TAG+"Temperature sensor has disconnected")
             t = ""
@@ -583,7 +591,7 @@ def get_temp():
     return False
 
 def main():
-    global start_t
+    global start_t, kbd_intr
     TAG = tag_adjust("main(): ")
     interval_t = 600  # 10 minutes
     print(TAG+f"Date time sync interval set to: {int(float(interval_t//60))} minutes")
@@ -593,6 +601,7 @@ def main():
     dt_shown = False
     start = True
     cnt = 0
+    stop = False
     while True:
         try:
             print('-'*89)
@@ -613,6 +622,9 @@ def main():
                         gc.collect()
                         time.sleep(0.1)
                         get_time_fm_AIO()
+                        if kbd_intr:
+                            stop = True
+                            break
                     else:
                         dt_shown = False
             time.sleep(delay)
@@ -624,6 +636,9 @@ def main():
             if use_tmp_sensor:
                 if temp_sensor_present:
                     get_temp()
+                    if kbd_intr:
+                        stop = True
+                        break
                     gc.collect()
                     time.sleep(delay)
                 else:
@@ -639,8 +654,11 @@ def main():
             if cnt > 999:
                 cnt = 0
         except KeyboardInterrupt:
-            print("KeyboardInterrupt. Exiting...")
-            sys.exit()
+            stop = True
+            break
+    if stop:
+        print("KeyboardInterrupt. Exiting...")
+        sys.exit()
 
 if __name__ == '__main__':
     main()
