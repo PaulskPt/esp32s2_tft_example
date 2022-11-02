@@ -315,10 +315,21 @@ def pr_id():
     #print(f"t_lst= {t_lst}")
     # Update this to change the size of the text displayed. Must be a whole number.
 
-    for _ in range(len(t_lst)):
+    if not my_debug:
+        print(TAG+"ID to display: \'", end='')
+    le = len(t_lst)
+    for _ in range(le):
         ta[_].scale = 3
         ta[_].text = t_lst[_]
+        t = t_lst[_]
+        if not my_debug:
+            if _ < le-1:
+                print(t+' ', end='')
+            else:
+                print(t, end='')
     board.DISPLAY.show(ta_grp)
+    if not my_debug:
+        print('\'', end='\n')
     #time.sleep(5)
 
 def pr_author():
@@ -583,6 +594,7 @@ def main():
     cnt = 0
     while True:
         try:
+            print('-'*89)
             curr_t = time.monotonic()
             elapsed_t = int(float(curr_t - start_t))
             print(TAG+f"elapsed_t=  {elapsed_t}")
