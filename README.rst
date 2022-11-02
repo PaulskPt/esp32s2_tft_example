@@ -20,10 +20,12 @@ Displays on TFT display:
 - ID of the microcontroller this script is running on
 - Battery Voltage and charge percentage
 - Temperature of connected sensor
-- At intervals synchronize the built-in realtime clock (RTC) with datetime
-  from Adafruit IO Time Service
 - Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 - Personal details of the author
+
+The built-in Realtime Clock (RTC) is set at start of the script with date and time received through a response of a request to the Adafruit IO Time Service (AIO TS).
+Then, at intervals, currently 10 minutes, the script again receives date and time through a response of a request to the AIO TS. 
+The script then updates the RTC.
 
 The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
 
@@ -93,5 +95,7 @@ The documentation can be found in the subfolder 'docs' of this repo.
 In this folder I added a REPL_output.txt file.
 In the folder 'images' I put a screenshot of the VSCode Outline of this example script.
 Added also a short video of the ESP32-S2-TFT-Feather and the TMP117 while this example script was running.
+
+For a manual of the Adafruit ESP32-S2-TFT-Feather see: '<https://cdn-learn.adafruit.com/downloads/pdf/adafruit-esp32-s2-tft-feather.pdf>'
 
 
