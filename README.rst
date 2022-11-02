@@ -20,10 +20,11 @@ Displays on TFT display:
 - ID of the microcontroller this script is running on
 - Battery Voltage and charge percentage
 - Temperature of connected sensor
-- At intervals synchronize the built-in realtime clock (RTC) with datetime
-  from Adafruit IO Time Service
-  Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
+- Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 - Personal details of the author
+
+At intervals (currently 10 minutes) the script gets the datetime from the Adafruit IO Time Service. 
+It then updates the built-in Realtime Clock (RTC).
 
 The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
 
