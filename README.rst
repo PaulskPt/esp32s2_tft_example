@@ -31,10 +31,6 @@ If the temperature sensor is disconnected this script will continue to
 try to reconnect to the sensor. If the sensor is connected again,
 this script will continue to read the temperature data from the sensor.
 
-Note: In function pr_id() I did some string slicing which is related to the current device name 
-retrieved by board.board_id because I didn't want to have an underscore displayed and I needed/wanted 
-the board_id to split over three lines of text on the display.
-
 Hardware requirements
 =====================
 
