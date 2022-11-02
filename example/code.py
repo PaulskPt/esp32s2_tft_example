@@ -304,33 +304,30 @@ def setup():
 def pr_id():
     global ta
     TAG= tag_adjust("pr_id(): ")
-    t = id[-11:]
-    t2 = ''
-    n = t.find('_')
-    # print(TAG+f"n= {n}")
-    if n >= 0:
-        t2 = t[:n] + ' '+ t[n+1:]  # replace '_' by ' '
-    else:
-        t2 = t
-    t_lst = [id[:8], id[9:16], t2] # ['Adafruit', 'feather', 'esp32s2_tft']
-    #print(f"t_lst= {t_lst}")
-    # Update this to change the size of the text displayed. Must be a whole number.
 
-    if not my_debug:
-        print(TAG+"ID to display: \'", end='')
-    le = len(t_lst)
-    for _ in range(le):
-        ta[_].scale = 3
-        t = t_lst[_]
-        ta[_].text = t
+    t_lst = id.split('_') # ['Adafruit', 'feather', 'esp32s2', 'tft']
+    if len(t_lst) > 0:
+        t_lst[2] = t_lst[2] + ' ' + t_lst[3] # join 3rd and 4th element
+        t_lst2 = []
+        for _ in range(len(t_lst)-1):  # create new list t_lst2, less the 4th element of t_lst
+            t_lst2.append(t_lst[_])
+        t_lst = []
+        # print(TAG+f"t_lst2= {t_lst2}") # ['Adafruit', 'feather', 'esp32s2 tft']
         if not my_debug:
-            if _ < le-1:
-                print(t+' ', end='')
-            else:
-                print(t, end='')
-    board.DISPLAY.show(ta_grp)
-    if not my_debug:
-        print('\'', end='\n')
+            print(TAG+"ID to display: \'", end='')
+        le = len(t_lst2)
+        for _ in range(le):
+            ta[_].scale = 3
+            t = t_lst2[_]
+            ta[_].text = t
+            if not my_debug:
+                if _ < le-1:
+                    print(t+' ', end='')
+                else:
+                    print(t, end='')
+        board.DISPLAY.show(ta_grp)
+        if not my_debug:
+            print('\'', end='\n')
     #time.sleep(5)
 
 def pr_author():
