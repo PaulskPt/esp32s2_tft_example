@@ -22,12 +22,12 @@ In main() I added a boolean variable: sync_dt.
 REPL output:
 
 
-]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | code.py | 8.0.0-beta.4\]0;🐍192.168.1.112 | Done | 8.0.0-beta.4\
+]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\]0;🐍192.168.1.xxx | Done | 8.0.0-beta.4\
 Code stopped by auto-reload. Reloading soon.
 
 Auto-reload is on. Simply save files over USB to run them or enter REPL to disable.
 code.py output:
-]0;🐱92.168.1.112 | code.py | 8.0.0-beta.4\
+]0;🐱92.168.1.xxx | code.py | 8.0.0-beta.4\
 This script is running on an 'adafruit_feather_esp32s2_tft'
 global:                Start scan for connected I2C devices...
                        2 I2C devices found:
