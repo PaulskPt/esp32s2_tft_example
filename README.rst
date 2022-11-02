@@ -13,7 +13,7 @@ The script creates four Groups:
 
 The script uses global label objects: ba, dt, ta and te. 
 These label objects will be used to actualize the label.text attribute from within the functions:
-pr_id(), pr_author(), pr_bat(), get_dt_fm_rtc() and get_time()
+pr_id(), pr_author(), pr_bat() and get_time()
 
 Displays on TFT display:
 
