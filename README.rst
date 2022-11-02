@@ -84,8 +84,8 @@ Don't change the names of the 'Keys' in secrets.py, e.g. 'ADAFRUIT_IO_KEY'.
 Automatic WiFi connection:
 --------------------------
 I added the .env file. In this file one needs to fill in ones 'WiFi SSID' and 'WiFi Password'
-(the same as one puts in file secrets.py). When the file .env is present. CircuitPython
-will automatically establish WiFi connection to the WiFi Access Point defined in .env (and in secrets.py)
+(the same as one puts in file secrets.py). When the file .env is present, CircuitPython
+will automatically establish WiFi connection to the WiFi Access Point defined in .env .
 When a WiFi connection has been established, the circuitpython status_bar will show an IP-address.
   
 
