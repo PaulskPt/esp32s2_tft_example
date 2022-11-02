@@ -22,7 +22,7 @@ Displays on TFT display:
 - Temperature of connected sensor
 - At intervals synchronize the built-in realtime clock (RTC) with datetime
   from Adafruit IO Time Service
-- Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
+  Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 - Personal details of the author
 
 The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
