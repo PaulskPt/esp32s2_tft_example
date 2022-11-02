@@ -585,7 +585,7 @@ def get_temp():
 def main():
     global start_t
     TAG = tag_adjust("main(): ")
-    interval_t = 60
+    interval_t = 600  # 10 minutes
     delay = 3
     setup()
 
