@@ -24,10 +24,10 @@ REPL output:
 
 
 
-]0;🐍192.168.1.112 | Done | 8.0.0-beta.4\
+]0;🐍192.168.1.xxx | Done | 8.0.0-beta.4\
 Auto-reload is on. Simply save files over USB to run them or enter REPL to disable.
 code.py output:
-]0;🐍192.168.1.112 | code.py | 8.0.0-beta.4\
+]0;🐍192.168.1.xxx | code.py | 8.0.0-beta.4\
 This script is running on an 'adafruit_feather_esp32s2_tft'
 global:                Start scan for connected I2C devices...
                        2 I2C devices found:
@@ -35,7 +35,7 @@ global:                Start scan for connected I2C devices...
                        Device 1 at address 0x48
                        End of i2c scan
 main():                Date time sync interval set to: 10 minutes
-setup():               WiFi already connected to: 'Vodafone-287778_EXT'
+setup():               WiFi already connected to: '<SSID of my WiFi AP>'
 -----------------------------------------------------------------------------------------
 main():                elapsed_t=  0
 main():                elapsed_t % interval_t =  0
