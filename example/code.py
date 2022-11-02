@@ -591,7 +591,7 @@ def get_temp():
     return False
 
 def main():
-    global start_t, kbd_intr
+    global start_t
     TAG = tag_adjust("main(): ")
     interval_t = 600  # 10 minutes
     print(TAG+f"Date time sync interval set to: {int(float(interval_t//60))} minutes")
