@@ -51,13 +51,13 @@ This example depends on:
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
 
 The script the following modules that are not in the CircuitPython core:
-```
+
 * dafruit_display_text
 * adafruit_lc709203f
 * adafruit_ntp
 * adafruit_tmp117
 * adafruit_register
-* neopixel```
+* neopixel
 
 * The needed modules one can get by downloading the .zip file of ones choice at 
   '<https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20221101>'
