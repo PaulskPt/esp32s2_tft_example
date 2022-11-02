@@ -27,7 +27,6 @@ import displayio
 from adafruit_display_text import bitmap_label
 from adafruit_lc709203f import LC709203F
 import neopixel
-import adafruit_ntp
 import adafruit_tmp117
 
 my_debug = False
@@ -120,6 +119,7 @@ if use_wifi:
     import socketpool
     from secrets import secrets
     import adafruit_requests
+    import adafruit_ntp
     from rtc import RTC
     ssid = secrets["ssid"]
     password = secrets["password"]
