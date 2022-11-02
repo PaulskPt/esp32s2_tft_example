@@ -24,7 +24,8 @@ Displays on TFT display:
   from Adafruit IO Time Service
 - Date (yyyy-mm-dd) and time (hh:mm) from built-in RTC
 - Personal details of the author
-- Blinks the normal internal LED as well as the built-in NEOPIXEL.
+
+The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
 
 This script contains a 'fail-safe' sensor connection:
 If the temperature sensor is disconnected this script will continue to
