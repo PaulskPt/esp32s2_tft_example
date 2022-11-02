@@ -94,4 +94,6 @@ In this folder I added a REPL_output.txt file.
 In the folder 'images' I put a screenshot of the VSCode Outline of this example script.
 Added also a short video of the ESP32-S2-TFT-Feather and the TMP117 while this example script was running.
 
+For a manual of the Adafruit ESP32-S2-TFT-Feather see: '<https://cdn-learn.adafruit.com/downloads/pdf/adafruit-esp32-s2-tft-feather.pdf>'
+
 
