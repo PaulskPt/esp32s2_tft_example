@@ -56,6 +56,7 @@ The script the following modules that are not in the CircuitPython core:
 * adafruit_lc709203f
 * adafruit_ntp
 * adafruit_tmp117
+* adafruit_requests
 * adafruit_register
 * neopixel
 
