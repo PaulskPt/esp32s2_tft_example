@@ -17,5 +17,5 @@ secrets = {
     'LOCAL_TIME_FLAG' : '1',
     'AUTHOR1' : "<Your_First_Name>", # e.g. (c)2022 Your First Name
     'AUTHOR2' : "<Your_Sirname>",
-    'AUTHOR3' : "<Your Github: nickname>"  # E.g: or Discord etc.
+    'AUTHOR3' : "<Your Github: nickname>"  # E.g: @PaulskPt or Discord etc.
     }

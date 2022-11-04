@@ -1,10 +1,14 @@
 Introduction
 ============
 
-This repo contains one example of how to program the Adafruit ESP32-S2-TFT-Feather (prod nr: 5300) 
+This repo contains two examples to show how one could program the Adafruit ESP32-S2-TFT-Feather (prod nr: 5300).
 
-The example uses the Adafruit_DisplayIO library. 
-The script creates four Groups: 
+These examples use the Adafruit_DisplayIO library. 
+
+Example Version_1:
+------------------
+
+This script creates four Groups: 
 
 - ba_grp for the battery;
 - dt_grp for the date and time;
@@ -29,10 +33,28 @@ The script then updates the RTC.
 
 The script also Blinks the normal internal (red) LED as well as the built-in NEOPIXEL.
 
-This script contains a 'fail-safe' sensor connection:
+Both example scripts contains a 'fail-safe' sensor connection:
 If the temperature sensor is disconnected this script will continue to
 try to reconnect to the sensor. If the sensor is connected again,
 this script will continue to read the temperature data from the sensor.
+
+Example Version_2:
+------------------
+This example adds .bmp images using the adafruit_imageload module. 
+There are a few more groups in this script:
+- logo1_grp and logo2_grp;
+- ba_grp for the battery;
+- dt_grp for the date and time;
+- ta1_grp for the disp_id()
+- ta2_grp for disp_author() functions;
+- te_grp for the temperature.
+
+Some function names have been changed. E.g.: 'pr_id' --> 'disp_id'.
+At the start of this script blinka.bmp is shown. The blinka.bmp is also displayed at leaving the script
+upon Ctrl+C (Keyboard interrupt).
+An avatar.bmp image is shown in function disp_author(), depending on the value of the global boolean flag 'use_avatar'.
+The .bmp files are in the folder /bmp.
+In this script the way the pages are being displayed differs from the method used in exampe 'version_1'
 
 Hardware requirements
 =====================
@@ -52,11 +74,13 @@ This example depends on:
 The script uses the following modules that are not in the CircuitPython core:
 
 * dafruit_display_text
+* adafruit_displayio_layout
+* adafruit_imageload
+* adafruit_register
 * adafruit_lc709203f
 * adafruit_ntp
-* adafruit_tmp117
 * adafruit_requests
-* adafruit_register
+* adafruit_tmp117
 * neopixel
 
 * The needed modules one can get by downloading the .zip file of ones choice at 
