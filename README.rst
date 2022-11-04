@@ -42,6 +42,7 @@ Example Version_2:
 ------------------
 This example adds .bmp images using the adafruit_imageload module. 
 There are a few more groups in this script:
+
 - logo1_grp and logo2_grp;
 - ba_grp for the battery;
 - dt_grp for the date and time;
